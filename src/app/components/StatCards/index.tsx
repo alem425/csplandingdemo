@@ -11,7 +11,7 @@ type StatCardProps = {
 
 const StatCard = ({ title, icon, base }: StatCardProps) => {
   return (
-    <div className="flex flex-col w-80 min-h-[16rem] rounded-3xl bg-slate-400 p-6 cursor-pointer">
+    <div className="flex flex-col w-80 min-h-[16rem] rounded-3xl bg-zinc-400 p-6 cursor-pointer border-none transition-all duration-300 transform hover:bg-sky-400">
       {/* ICON  */}
       <div className="flex justify-end text-white text-3xl">{icon}</div>
       {/* TITLE   */}

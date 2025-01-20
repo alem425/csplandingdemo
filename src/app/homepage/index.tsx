@@ -1,20 +1,72 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/src/app/components/Navbar";
 import { Lightbulb, ImageUp, Instagram } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import StatCard from "../components/StatCards";
 import HelpCards from "../components/HelpCards";
 import BrandsCards from "../components/BrandsCards";
 
+export function useIsVisible(ref: React.RefObject<HTMLElement | null>) {
+  const [isIntersecting, setIntersecting] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIntersecting(true);
+        // Once visible, disconnect the observer since we don't need it anymore
+        observer.disconnect();
+      }
+    });
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref]);
+
+  return isIntersecting;
+}
+
 const Home = () => {
+  const ref1 = useRef<HTMLDivElement>(null);
+  const isVisible1 = useIsVisible(ref1);
+
+  const ref2 = useRef<HTMLDivElement>(null);
+  const isVisible2 = useIsVisible(ref2);
+
+  const ref3 = useRef<HTMLDivElement>(null);
+  const isVisible3 = useIsVisible(ref3);
+
+  const ref4 = useRef<HTMLDivElement>(null);
+  const isVisible4 = useIsVisible(ref4);
+
+  const ref5 = useRef<HTMLDivElement>(null);
+  const isVisible5 = useIsVisible(ref5);
+
+  const ref6 = useRef<HTMLDivElement>(null);
+  const isVisible6 = useIsVisible(ref6);
+
+  const ref7 = useRef<HTMLDivElement>(null);
+  const isVisible7 = useIsVisible(ref7);
+
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-col items-center bg-indigo-950 max-h-fit  pb-12 h-4/6 ">
         <Navbar />
 
         {/* HEADER  */}
-        <div className="mt-10 w-10/12 lg:w-4/5 items-center text-center md:w-6/12">
+        <div
+          ref={ref1}
+          className={`mt-10 w-10/12 lg:w-4/5 items-center text-center md:w-6/12 transition-opacity ease-in duration-600 ${
+            isVisible1 ? "opacity-100" : "opacity-0"
+          }`}
+        >
           <h1 className="text-6xl md:text-6xl lg:text-8xl font-extrabold">
             EVERY <span className="text-orange-400">GREAT PRODUCT</span> BEGINS
             WITH A <span className="text-cyan-400">BOLD VISION</span>
@@ -22,17 +74,22 @@ const Home = () => {
         </div>
 
         {/* SUBHEADER  */}
-        <div className="flex flex-row mt-3 w-10/12 lg:w-1/2  justify-center items-center text-center gap-10">
+        <div
+          ref={ref2}
+          className={`flex flex-row mt-3 w-10/12 lg:w-1/2  justify-center items-center text-center gap-10 transition-opacity ease-in duration-700 ${
+            isVisible2 ? "opacity-100" : "opacity-0"
+          }`}
+        >
           <p className=" text-slate-400 w-1/2 font-bold ml-3 lg:text-base">
             A globally recognized, full service, data, and technology driven
             digital marketing agency strongly supported with strategic thinkers,
             creative designers, content creators.
           </p>
           <div className="flex flex-row justify-between items-center gap-4 mr-3">
-            <button className="rounded-full bg-orange-400 px-2 py-2 md:py-3 xl:py-4">
+            <button className="rounded-full bg-orange-400 px-2 py-2 md:py-3 xl:py-4 transition-all duration-300 transform hover:scale-110">
               Get a Proposal
             </button>
-            <button className="rounded-full border-2 border-orange-400 px-2 py-2 md:py-3 xl:py-4">
+            <button className="rounded-full border-2 border-orange-400 px-2 py-2 md:py-3 xl:py-4 transition-all duration-300 transform hover:scale-110">
               Our Services
             </button>
           </div>
@@ -41,7 +98,12 @@ const Home = () => {
 
       {/* WHITE BG BODY  */}
       {/* IMAGE */}
-      <div className="flex justify-center items-center mt-10">
+      <div
+        ref={ref3}
+        className={`flex justify-center items-center mt-10 transition-opacity ease-in duration-700 ${
+          isVisible3 ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <Image
           src="/assets/social2.jpg"
           alt="Social Apps"
@@ -51,7 +113,12 @@ const Home = () => {
         />
       </div>
       {/* TEXT GROUP 2  */}
-      <div className="flex justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12">
+      <div
+        ref={ref4}
+        className={`flex justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12 transition-opacity ease-in duration-700 ${
+          isVisible4 ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <h1
           className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-slate-500
         "
@@ -62,7 +129,12 @@ const Home = () => {
       </div>
 
       {/* CARD GROUP */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-10 w-10/12">
+      <div
+        ref={ref5}
+        className={`flex flex-col md:flex-row justify-center items-center gap-5 mt-10 w-10/12 transition-opacity ease-in duration-700 ${
+          isVisible5 ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <StatCard
           title="10+"
           icon={<ImageUp />}
@@ -87,8 +159,12 @@ const Home = () => {
 
       {/* MARKETING STUFF TILE */}
       {/* HEADING  */}
-      <div className="flex flex-col items-center bg-indigo-950 max-h-fit  pb-12 h-4/6 mt-10 w-full">
-        <div className="flex justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12">
+      <div
+        className={`flex flex-col items-center bg-indigo-950 max-h-fit  pb-12 h-4/6 mt-10 w-full transition-opacity ease-in duration-700 ${
+          isVisible5 ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <div className="flex justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12 ">
           <h1
             className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-white
         "
@@ -100,7 +176,7 @@ const Home = () => {
 
         {/* TILE BODY  */}
 
-        <div className="flex flex-row justify-between items-center w-10/12 xl:w-7/12  xl:gap-6 mt-14 gap-4">
+        <div className="flex flex-row justify-between items-center w-10/12 xl:w-7/12  xl:gap-6 mt-14 gap-4 motion-preset-slide-up">
           <div className="flex flex-col text-base md:text-lg">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit
@@ -112,7 +188,7 @@ const Home = () => {
               dolore molestiae, fuga a dignissimos in deleniti. Consequatur,
               esse!
             </p>
-            <button className="rounded-full bg-orange-400 px-2 py-2 w-3/4 md:py-3 xl:py-4 mt-10">
+            <button className="rounded-full bg-orange-400 px-2 py-2 w-3/4 md:py-3 xl:py-4 mt-10 transition-all duration-300 transform hover:scale-110">
               Learn More
             </button>
           </div>
@@ -128,8 +204,13 @@ const Home = () => {
 
       {/* WIDER CARD TILES SECTION */}
       {/* HEADING AND CONTEXT  */}
-      <div className="flex flex-col items-center w-10/12">
-        <div className="flex flex-row items-center justify-between lg:w-8/12">
+      <div className="flex flex-col items-center w-10/12 motion-preset-slide-up">
+        <div
+          ref={ref6}
+          className={`flex flex-row items-center justify-between lg:w-8/12 transition-opacity ease-in duration-700 ${
+            isVisible6 ? "opacity-100" : "opacity-0"
+          }`}
+        >
           {/* HEADING  */}
           <div className="flex justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12">
             <h1
@@ -151,7 +232,10 @@ const Home = () => {
         </div>
         {/* CARDS  */}
 
-        <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-10 w-10/12 ml-5">
+        <div
+          className={`flex flex-col md:flex-row justify-center items-center gap-5 mt-10 w-10/12 ml-5 transition-opacity ease-in duration-700 
+          `}
+        >
           <HelpCards
             num="01"
             title="AFFILIATE MARKETING"
@@ -197,9 +281,14 @@ const Home = () => {
       </div>
 
       {/* LEADING BRANDS CARDS AND PROJ START */}
-      <div className="flex flex-col justify-center items-center bg-indigo-950 max-h-fit w-full mt-10">
+      <div
+        ref={ref7}
+        className={`flex flex-col justify-center items-center bg-indigo-950 max-h-fit w-full mt-10 transition-opacity ease-in duration-700 ${
+          isVisible7 ? "opacity-100" : "opacity-0"
+        }`}
+      >
         {/* HEADING  */}
-        <div className="flex justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12">
+        <div className="flex justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12 motion-preset-slide-up">
           <h1
             className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-white
         "
@@ -211,7 +300,7 @@ const Home = () => {
 
         {/* CARDS  */}
 
-        <div className="flex flex-row gap-4 mt-10 sm:w-11/12 md:8/12 items-center justify-center">
+        <div className="flex flex-row gap-4 mt-10 sm:w-11/12 md:8/12 items-center justify-center motion-preset-slide-up xl:gap-10">
           <BrandsCards
             name="Meta"
             icon={
@@ -261,7 +350,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="flex flex-row gap-4 mt-5 sm:w-11/12 md:8/12 items-center justify-center">
+        <div className="flex flex-row gap-4 mt-5 sm:w-11/12 md:8/12 items-center justify-center xl:gap-10">
           <BrandsCards
             name="Intel"
             icon={
@@ -312,7 +401,7 @@ const Home = () => {
         </div>
 
         {/* PROJECT START  */}
-        <div className="flex flex-col bg-sky-400 items-center rounded-3xl h-[250px] w-[600px]  m-20">
+        <div className="flex flex-col bg-sky-400 items-center rounded-3xl h-[250px] w-[600px]  m-20 motion-preset-slide-up">
           <div className="flex justify-center mt-14 md:mt-8 w-8/12 lg:w-6/12 items-center text-center md:w-6/12">
             <h1
               className="text-5xl font-extrabold text-white
@@ -322,7 +411,7 @@ const Home = () => {
             </h1>
           </div>
 
-          <button className="rounded-full mt-16 md:mt-10 bg-white w-1/4 px-2 py-2 md:py-3 xl:py-4">
+          <button className="rounded-full mt-16 md:mt-10 bg-white w-1/4 px-2 py-2 md:py-3 xl:py-4 transition-all duration-300 transform hover:scale-110">
             <p className="text-sky-400">Get a Proposal</p>
           </button>
         </div>

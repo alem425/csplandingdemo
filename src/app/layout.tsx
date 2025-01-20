@@ -1,37 +1,19 @@
 import type { Metadata } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Montserrat,
-  Inter,
-  Albert_Sans,
-} from "next/font/google";
-import { LucideProps } from "lucide-react";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-montserrat",
+  preload: true,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-});
-
-const albert_sans = Albert_Sans({
-  subsets: ["latin"],
-  display: "swap",
+  variable: "--font-inter",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -45,11 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={` ${albert_sans.className} ${montserrat.className} antialiased`}
-    >
-      <body>{children}</body>
+    <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
