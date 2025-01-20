@@ -9,13 +9,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: white;
     --foreground: #ededed;
   }
+}
+
+
+html,
+body,
+#root,
+.app{
+  height: 100%;
+  width: 100%;
+  @apply text-sm;
+  @apply bg-white;
+  @apply text-slate-500;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
