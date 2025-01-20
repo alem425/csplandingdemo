@@ -2,9 +2,8 @@
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import Navbar from "@/src/app/components/Navbar";
-import { Lightbulb, ImageUp, Instagram } from "lucide-react";
+import { ImageUp } from "lucide-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import StatCard from "../components/StatCards";
 import HelpCards from "../components/HelpCards";
 import BrandsCards from "../components/BrandsCards";

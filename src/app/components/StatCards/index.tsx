@@ -1,8 +1,5 @@
 "use client";
-import { LucideIcon } from "lucide-react";
 import React from "react";
-import { JSX } from "react/jsx-runtime";
-
 type StatCardProps = {
   title: string;
   icon: React.ReactNode;
