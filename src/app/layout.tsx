@@ -1,23 +1,6 @@
 import type { Metadata } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Montserrat,
-  Inter,
-  Albert_Sans,
-} from "next/font/google";
-import { LucideProps } from "lucide-react";
+import { Montserrat, Inter, Albert_Sans } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -47,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={` ${albert_sans.className} ${montserrat.className} antialiased`}
+      className={` ${albert_sans.className}  ${inter.className} ${montserrat.className} antialiased`}
     >
       <body>{children}</body>
     </html>
