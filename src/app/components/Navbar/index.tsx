@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div
       ref={ref1}
-      className={`flex flex-row justify-between items-center rounded-full bg-white w-10/12 mt-6 py-6 gap-4 transition-opacity ease-in duration-700 ${
+      className={`hidden md:flex flex-row justify-between items-center rounded-full bg-white w-10/12 mt-6 py-6 gap-4 transition-opacity ease-in duration-700 ${
         isVisible1 ? "opacity-100" : "opacity-0"
       }`}
     >

@@ -5,16 +5,19 @@ import "./globals.css";
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-montserrat",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 const albert_sans = Albert_Sans({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-albert-sans",
 });
 
 export const metadata: Metadata = {
@@ -30,9 +33,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={` ${albert_sans.className}  ${inter.className} ${montserrat.className} antialiased`}
+      className={`${albert_sans.variable} ${inter.variable} ${montserrat.variable}`}
+      suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

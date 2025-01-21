@@ -9,7 +9,7 @@ type HelpCardsProps = {
 
 const HelpCards = ({ num, title, base, icon }: HelpCardsProps) => {
   return (
-    <div className="flex flex-col w-100 min-h-[16rem] rounded-3xl bg-zinc-400 p-4 cursor-pointer transition-all duration-300 transform hover:bg-sky-400">
+    <div className="flex flex-col w-100 min-h-[16rem] rounded-3xl bg-zinc-400 p-4 cursor-pointer shadow-lg shadow-black  transition-all duration-300 transform hover:bg-sky-400 hover:shadow-sky-200">
       {/* ICON  */}
       <div className="flex justify-end text-white text-3xl">{icon}</div>
       {/* TITLE   */}

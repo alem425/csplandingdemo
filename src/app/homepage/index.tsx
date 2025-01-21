@@ -62,7 +62,7 @@ const Home = () => {
         {/* HEADER  */}
         <div
           ref={ref1}
-          className={`mt-10 w-10/12 lg:w-4/5 items-center text-center md:w-6/12 transition-opacity ease-in duration-600 ${
+          className={`mt-10 w-11/12 sm:w-10/12 lg:w-4/5 items-center text-center md:w-6/12 transition-opacity ease-in duration-600 ${
             isVisible1 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -75,20 +75,20 @@ const Home = () => {
         {/* SUBHEADER  */}
         <div
           ref={ref2}
-          className={`flex flex-row mt-3 w-10/12 lg:w-1/2  justify-center items-center text-center gap-10 transition-opacity ease-in duration-700 ${
+          className={`flex flex-row mt-3 py-5 w-full sm:w-10/12 lg:w-1/2  justify-center items-center text-center  gap-2 sm:gap-5 transition-opacity ease-in duration-700 ${
             isVisible2 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className=" text-slate-400 w-1/2 font-bold ml-3 lg:text-base">
+          <p className=" text-slate-400 w-8/12 sm:w-1/2 font-bold sm:ml-3 lg:text-base">
             A globally recognized, full service, data, and technology driven
             digital marketing agency strongly supported with strategic thinkers,
             creative designers, content creators.
           </p>
-          <div className="flex flex-row justify-between items-center gap-4 mr-3">
-            <button className="rounded-full bg-orange-400 px-2 py-2 md:py-3 xl:py-4 transition-all duration-300 transform hover:scale-110">
+          <div className="flex flex-col w-1/2 sm:flex-row justify-between items-center gap-2 sm:gap-4 sm:mr-3">
+            <button className=" text-center rounded-full bg-orange-400 w-full py-2 sm:py-4 sm:w-6/12 transition-all duration-300 transform hover:scale-110">
               Get a Proposal
             </button>
-            <button className="rounded-full border-2 border-orange-400 px-2 py-2 md:py-3 xl:py-4 transition-all duration-300 transform hover:scale-110">
+            <button className="rounded-full border-2 border-orange-400 w-full py-2 sm:py-4  sm:w-6/12 transition-all duration-300 transform hover:scale-110">
               Our Services
             </button>
           </div>
@@ -175,8 +175,8 @@ const Home = () => {
 
         {/* TILE BODY  */}
 
-        <div className="flex flex-row justify-between items-center w-10/12 xl:w-7/12  xl:gap-6 mt-14 gap-4 motion-preset-slide-up">
-          <div className="flex flex-col text-base md:text-lg">
+        <div className="flex flex-col sm:flex-row justify-between items-center w-10/12 xl:w-7/12  xl:gap-6 mt-14 gap-4 motion-preset-slide-up">
+          <div className="flex items-center sm:items-start flex-col text-base md:text-lg">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit
               consectetur tenetur ducimus, harum porro fugiat fugit ex doloribus
@@ -206,7 +206,7 @@ const Home = () => {
       <div className="flex flex-col items-center w-10/12 motion-preset-slide-up">
         <div
           ref={ref6}
-          className={`flex flex-row items-center justify-between lg:w-8/12 transition-opacity ease-in duration-700 ${
+          className={`flex flex-col sm:flex-row items-center justify-between lg:w-8/12 transition-opacity ease-in duration-700 ${
             isVisible6 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -299,7 +299,7 @@ const Home = () => {
 
         {/* CARDS  */}
 
-        <div className="flex flex-row gap-4 mt-10 sm:w-11/12 md:8/12 items-center justify-center motion-preset-slide-up xl:gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 w-full md:w-8/12 justify-items-center motion-preset-slide-up xl:gap-10">
           <BrandsCards
             name="Meta"
             icon={
@@ -349,7 +349,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="flex flex-row gap-4 mt-5 sm:w-11/12 md:8/12 items-center justify-center xl:gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-5 sm:mt-10 w-full md:w-8/12 justify-items-center motion-preset-slide-up xl:gap-10">
           <BrandsCards
             name="Intel"
             icon={
@@ -400,7 +400,7 @@ const Home = () => {
         </div>
 
         {/* PROJECT START  */}
-        <div className="flex flex-col bg-sky-400 items-center rounded-3xl h-[250px] w-[600px]  m-20 motion-preset-slide-up">
+        <div className="flex flex-col bg-sky-400 items-center justify-center rounded-3xl min-h-fit  w-[360px] sm:h-[250px] sm:w-[600px]  m-20 motion-preset-slide-up">
           <div className="flex justify-center mt-14 md:mt-8 w-8/12 lg:w-6/12 items-center text-center md:w-6/12">
             <h1
               className="text-5xl font-extrabold text-white
@@ -410,7 +410,7 @@ const Home = () => {
             </h1>
           </div>
 
-          <button className="rounded-full mt-16 md:mt-10 bg-white w-1/4 px-2 py-2 md:py-3 xl:py-4 transition-all duration-300 transform hover:scale-110">
+          <button className="rounded-full my-8 md:mt-10 bg-white w-2/4 px-2 py-2 md:py-3 xl:py-4 transition-all duration-300 transform hover:scale-110">
             <p className="text-sky-400">Get a Proposal</p>
           </button>
         </div>
