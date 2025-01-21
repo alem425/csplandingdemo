@@ -12,9 +12,20 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        breathe: "breathe 2s infinite ease-in-out",
+      },
+      keyframes: {
+        breathe: {
+          "0%, 100%": { borderWidth: "2px", opacity: "1" },
+          "50%": { borderWidth: "8px", opacity: "0.5" },
+        },
+      },
     },
   },
-  plugins: [require('tailwindcss-motion')],
-  
+  plugins: [
+    require('tailwindcss-motion'), // Existing plugin
+  ],
 } satisfies Config;
+
 

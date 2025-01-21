@@ -75,7 +75,7 @@ const Home = () => {
         {/* SUBHEADER  */}
         <div
           ref={ref2}
-          className={`flex flex-row mt-3 py-5 w-full sm:w-10/12 lg:w-1/2  justify-center items-center text-center  gap-2 sm:gap-5 transition-opacity ease-in duration-700 ${
+          className={`flex flex-row mt-3 py-5 w-11/12 sm:w-10/12 lg:w-1/2  justify-center items-center text-center  gap-2 sm:gap-5 transition-opacity ease-in duration-700 ${
             isVisible2 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -169,7 +169,7 @@ const Home = () => {
         "
           >
             MARKETING FOR <span className="text-orange-400">BUSINESS</span> AND
-            <span className="text-cyan-400"> ENTREPRENURS</span>
+            <span className="text-cyan-400"> ENTREPRENEURS</span>
           </h1>
         </div>
 
@@ -299,7 +299,7 @@ const Home = () => {
 
         {/* CARDS  */}
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 w-full md:w-8/12 justify-items-center motion-preset-slide-up xl:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5 lg:mt-10 w-full md:w-8/12 justify-items-center motion-preset-slide-up xl:gap-10">
           <BrandsCards
             name="Meta"
             icon={
@@ -349,7 +349,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-5 sm:mt-10 w-full md:w-8/12 justify-items-center motion-preset-slide-up xl:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 mt-5 lg:mt-10 w-full md:w-8/12 justify-items-center motion-preset-slide-up xl:gap-0">
           <BrandsCards
             name="Intel"
             icon={
