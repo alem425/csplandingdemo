@@ -5,7 +5,6 @@ import Navbar from "@/src/app/components/Navbar";
 import { ImageUp } from "lucide-react";
 import Image from "next/image";
 import StatCard from "../components/StatCards";
-import BrandsCards from "../components/BrandsCards";
 import InputFields from "../components/InputFields";
 import Shape from "../components/Shapes";
 export function useIsVisible(ref: React.RefObject<HTMLElement | null>) {
