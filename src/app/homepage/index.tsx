@@ -6,7 +6,7 @@ import { ImageUp } from "lucide-react";
 import Image from "next/image";
 import StatCard from "../components/StatCards";
 import InputFields from "../components/InputFields";
-import Shape from "../components/Shapes";
+// import Shape from "../components/Shapes";
 export function useIsVisible(ref: React.RefObject<HTMLElement | null>) {
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -176,13 +176,13 @@ const Home = () => {
             <span className="text-cyan-400"> ENTREPRENEURS</span>
           </h1>
         </div>
-        <Shape
+        {/* <Shape
           type="circle"
           color="bg-blue-900"
           size={75}
           opacity={0.5}
           className="bg-blue-900"
-        />
+        /> */}
         {/* TILE BODY  */}
 
         <div className="flex flex-col sm:flex-row justify-between items-center w-10/12 xl:w-7/12  xl:gap-6 mt-14 gap-4 motion-preset-slide-up">
