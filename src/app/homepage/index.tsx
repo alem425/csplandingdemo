@@ -5,9 +5,9 @@ import Navbar from "@/src/app/components/Navbar";
 import { ImageUp } from "lucide-react";
 import Image from "next/image";
 import StatCard from "../components/StatCards";
-import HelpCards from "../components/HelpCards";
 import BrandsCards from "../components/BrandsCards";
-
+import InputFields from "../components/InputFields";
+import Shape from "../components/Shapes";
 export function useIsVisible(ref: React.RefObject<HTMLElement | null>) {
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -67,8 +67,8 @@ const Home = () => {
           }`}
         >
           <h1 className="text-6xl md:text-6xl lg:text-8xl font-extrabold">
-            EVERY <span className="text-orange-400">GREAT PRODUCT</span> BEGINS
-            WITH A <span className="text-cyan-400">BOLD VISION</span>
+            CSP'S PREMIUM <span className="text-orange-400">TECH</span> AND{" "}
+            <span className="text-cyan-400">DIGITAL MARKETING</span> SERVICES!
           </h1>
         </div>
 
@@ -80,9 +80,13 @@ const Home = () => {
           }`}
         >
           <p className=" text-slate-400 w-8/12 sm:w-1/2 font-bold sm:ml-3 lg:text-base">
-            A globally recognized, full service, data, and technology driven
-            digital marketing agency strongly supported with strategic thinkers,
-            creative designers, content creators.
+            At CSP, we understand the critical role technology and digital
+            marketing play in the success of your business. Our comprehensive
+            service packages are designed to meet the diverse needs of our
+            clients, from non-profits and startups, to established enterprises.
+            Every package comes with a dedicated IT team, managed by tech
+            veterans with 40 years of combined experience. Explore our tailored
+            tiers and discover how we can elevate your business to new heights.
           </p>
           <div className="flex flex-col w-1/2 sm:flex-row justify-between items-center gap-2 sm:gap-4 sm:mr-3">
             <button className=" text-center rounded-full bg-orange-400 w-full py-2 sm:py-4 sm:w-6/12 transition-all duration-300 transform hover:scale-110">
@@ -122,37 +126,38 @@ const Home = () => {
           className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-slate-500
         "
         >
-          <span className="text-orange-400">DRIVING</span> DIGITAL GROWTH,{" "}
-          <span className="text-cyan-400">EMPOWERING</span> BRANDS WORLDWIDE.
+          <span className="text-orange-400">OUR</span> SERVICE{" "}
+          <span className="text-cyan-400">TIERS</span>
         </h1>
       </div>
 
       {/* CARD GROUP */}
       <div
         ref={ref5}
-        className={`flex flex-col md:flex-row justify-center items-center gap-5 mt-10 w-10/12 transition-opacity ease-in duration-700 ${
+        className={`flex flex-col lg:flex-row justify-center items-center gap-5 mt-10 w-11/12 xl:w-10/12 max-w-7xl transition-opacity ease-in duration-700 ${
           isVisible5 ? "opacity-100" : "opacity-0"
         }`}
       >
         <StatCard
-          title="10+"
+          title="Basic Tier"
           icon={<ImageUp />}
-          base="Years of experience in leading digital agencies"
+          base="Get started with foundational services to ensure your business runs smoothly and your online presence is optimized. Ideal for small businesses and startups.
+"
         />
         <StatCard
-          title="500+"
+          title="Standard Tier"
           icon={<ImageUp />}
-          base="Clients taken services from us across the globe"
+          base="Benefit from advanced IT solutions and strategic digital marketing to propel your business forward. Perfect for growing businesses seeking to expand their reach and efficiency."
         />
         <StatCard
-          title="95%"
+          title="Premium Tier"
           icon={<ImageUp />}
-          base="Customer support satisfaction across the globe"
+          base="Experience top-tier security measures and cutting-edge technology solutions. Suited for enterprises requiring robust protection and advanced development."
         />
         <StatCard
-          title="4.5"
+          title="Coding Plus Tier"
           icon={<ImageUp />}
-          base="Average ratings given by our loving clients to us"
+          base="Unlock the potential of custom app development, prototyping, and data analytics. Designed for businesses that rely on sophisticated software and data-driven decision-making."
         />
       </div>
 
@@ -172,11 +177,17 @@ const Home = () => {
             <span className="text-cyan-400"> ENTREPRENEURS</span>
           </h1>
         </div>
-
+        <Shape
+          type="circle"
+          color="bg-blue-900"
+          size={75}
+          opacity={0.5}
+          className="bg-blue-900"
+        />
         {/* TILE BODY  */}
 
         <div className="flex flex-col sm:flex-row justify-between items-center w-10/12 xl:w-7/12  xl:gap-6 mt-14 gap-4 motion-preset-slide-up">
-          <div className="flex items-center sm:items-start flex-col text-base md:text-lg">
+          <div className="flex items-center sm:items-start flex-col text-base text-center sm:text-left md:text-lg">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit
               consectetur tenetur ducimus, harum porro fugiat fugit ex doloribus
@@ -206,201 +217,186 @@ const Home = () => {
       <div className="flex flex-col items-center w-10/12 motion-preset-slide-up">
         <div
           ref={ref6}
-          className={`flex flex-col sm:flex-row items-center justify-between lg:w-8/12 transition-opacity ease-in duration-700 ${
+          className={`flex flex-col items-center justify-center lg:w-8/12 transition-opacity ease-in duration-700 ${
             isVisible6 ? "opacity-100" : "opacity-0"
           }`}
         >
           {/* HEADING  */}
-          <div className="flex justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12">
+          <div className="flex flex-col justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12">
             <h1
               className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-slate-500
         "
             >
-              WHAT WE ARE HERE TO <span className="text-orange-400">HELP</span>{" "}
-              <span className="text-cyan-400"> YOU</span> WITH
+              <span className="text-orange-400">SERVICE</span>{" "}
+              <span className="text-cyan-400">DESCRIPTIONS</span>
             </h1>
-          </div>
 
-          {/* CONTEXT  */}
-
-          <div className="text-base  justify-between mt-10 sm:gap-3 md:text-lg text-black font-semibold text-center md:w-1/2 lg:w-1/3">
-            A globally recognized, full service, data, and technology driven
-            digital marketing agency strongly supported with strategic thinkers,
-            creative designers.
+            <div className="flex text-lg text-slate-500">
+              Options specifically catered towards your goals and budget.
+            </div>
           </div>
         </div>
         {/* CARDS  */}
-
-        <div
-          className={`flex flex-col md:flex-row justify-center items-center gap-5 mt-10 w-10/12 ml-5 transition-opacity ease-in duration-700 
-          `}
-        >
-          <HelpCards
-            num="01"
-            title="AFFILIATE MARKETING"
-            base="Leverage highly motivated and well-known websites to drive revenue for your brand."
-            icon={<ImageUp />}
-          />
-
-          <HelpCards
-            num="02"
-            title="SOCIAL MEDIA"
-            base="Leverage highly motivated and well-known websites to drive revenue for your brand."
-            icon={<ImageUp />}
-          />
+        <div className="flex flex-col my-10 h-1/4 md:h-28 w-3/4 md:w-3/4 lg:w-3/5 bg-amber-700 rounded-xl cursor-pointer md:transition-all md:duration-300 md:hover:h-72 lg:hover:h-72 md:hover:rounded-lg p-6 md:overflow-hidden md:relative group shadow-md shadow-black">
+          <h3 className="text-white text-2xl font-bold">Basic Tier</h3>
+          <div className="py-4 md:opacity-0 md:transition-opacity md:duration-300 group-hover:opacity-100">
+            <ul className="text-white mt-2 list-disc pl-5">
+              <li className="my-2">
+                <b>IT Support for Distributed Teams:</b> Ensure seamless
+                operations for remote and hybrid work environments with
+                dedicated IT support.
+              </li>
+              <li className="my-2">
+                <b>Minor Website Updates:</b> Keep your website fresh and
+                relevant with regular updates and maintenance
+              </li>
+              <li className="my-2">
+                <b>SEO(Search Engine Optimization):</b> Improve your website's
+                visibility on search engines to attract more organic traffic.
+              </li>
+              <li className="my-2">
+                <b>Blog Marketing Execution:</b> Create and distribute valuable
+                blog content to attract and retain customers
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-5 md:mt-10 w-10/12 ml-5">
-          <HelpCards
-            num="03"
-            title="CONTENT MARKETING"
-            base="Leverage highly motivated and well-known websites to drive revenue for your brand."
-            icon={<ImageUp />}
-          />
-          <HelpCards
-            num="04"
-            title="PPC/ PAID MEDIA"
-            base="Leverage highly motivated and well-known websites to drive revenue for your brand."
-            icon={<ImageUp />}
-          />
+
+        <div className="flex flex-col py-5 my-10  md:h-28 w-3/4 md:w-3/4 lg:w-3/5 bg-slate-400 rounded-xl cursor-pointer md:transition-all md:duration-300 md:hover:h-98 lg:hover:h-72 md:hover:rounded-lg p-6 overflow-hidden relative group shadow-md shadow-black">
+          <h3 className="text-white text-2xl font-bold">Standard Tier</h3>
+          <div className="md:opacity-0 md:transition-opacity md:duration-300 group-hover:opacity-100">
+            <ul className="text-white mt-2 list-disc pl-5">
+              <li className="my-2">
+                <b>Cloud Computing:</b> Leverage the power of the cloud for
+                scalable storage and computing solutions.
+              </li>
+              <li className="my-2">
+                <b>Managed IT Services:</b> Outsource your IT management and
+                support to our expert team.
+              </li>
+              <li className="my-2">
+                <b>Low Code/No Code Development:</b> Enable non-developers to
+                create applications with ease.
+              </li>
+              <li className="my-2">
+                <b>Document Creation:</b> Develop comprehensive documents,
+                including best practices, professional development guides, and
+                user manuals.
+              </li>
+              <li className="my-2">
+                <b>Content Marketing:</b> Craft and share valuable content to
+                engage and educate your audience.
+              </li>
+              <li className="my-2">
+                <b>Email Marketing:</b> Deliver targeted emails to promote your
+                producs or services effectively.
+              </li>
+              <li className="my-1">
+                <b>PPC(Pay-Per-Click) Advertising:</b> Drive traffic and
+                conversions with paid ads on search engines and social media.
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-5 md:mt-10 w-10/12 ml-5">
-          <HelpCards
-            num="05"
-            title="EMAIL MARKETING"
-            base="Leverage highly motivated and well-known websites to drive revenue for your brand."
-            icon={<ImageUp />}
-          />
-          <HelpCards
-            num="06"
-            title="ON/OFF PAGE SEO"
-            base="Leverage highly motivated and well-known websites to drive revenue for your brand."
-            icon={<ImageUp />}
-          />
+
+        <div className="flex flex-col my-10 pb-4 md:h-28 w-3/4 md:w-3/4 lg:w-3/5 bg-yellow-600 rounded-xl cursor-pointer md:transition-all md:duration-300 md:hover:h-100 lg:hover:h-96 hover:rounded-lg hover:pb-4 p-6 overflow-hidden relative group shadow-md shadow-black">
+          <h3 className="text-white text-2xl font-bold">Premium Tier</h3>
+          <div className="opacity-100 md:opacity-0 md:transition-opacity duration-300 group-hover:opacity-100">
+            <ul className="text-white mt-2 list-disc pl-5">
+              <li className="my-2">
+                <b>Cybersecurity:</b> Protect your systems and data from cyber
+                threats with advanced security measures.
+              </li>
+              <li className="my-2">
+                <b>Data Engineering:</b> Manage and process large data sets to
+                derive actionable insights.
+              </li>
+              <li className="my-2">
+                <b>AI,VR,AR, and Metaverse Services:</b> Implement cutting-edge
+                technologies to enhance user experiences and business
+                operations.
+              </li>
+              <li className="my-2">
+                <b>Website Development:</b> Create and maintain a professional,
+                high-performing website.
+              </li>
+              <li className="my-2">
+                <b>Web Design and Development:</b> Design visually appealing and
+                user-friendly websites that meet your business needs.
+              </li>
+              <li className="my-2">
+                <b>Video Marketing:</b> Produce and share compelling video
+                content to captivate your audience.
+              </li>
+              <li className="my-2">
+                <b>Lead Generation:</b> Attract and convert potential customers
+                with targeted strategies.
+              </li>
+              <li className="my-2">
+                <b>Conversion Optimization:</b> Improve your website's
+                performance to increase conversions.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex flex-col my-10 md:h-28 w-3/4 md:w-3/4 lg:w-3/5 bg-sky-600 rounded-xl cursor-pointer md:transition-all md:duration-300 md:hover:h-80 md:hover:rounded-lg xl:hover:h-56 p-6 overflow-hidden relative group shadow-md shadow-black">
+          <h3 className="text-white text-2xl font-bold">Coding Plus Tier</h3>
+          <div className="py-4 opacity-100 md:opacity-0 md:transition-opacity duration-300 group-hover:opacity-100">
+            <ul className="text-white mt-4 list-disc pl-5">
+              <li className="my-2">
+                <b>App Development:</b> Develop custom applications tailored to
+                your business requirements.
+              </li>
+              <li className="my-2">
+                <b>Prototyping:</b> Create and test prototypes to refine your
+                products and services.
+              </li>
+              <li className="my-2">
+                <b>Wireframing:</b> Design wireframes to visualize and plan your
+                user interfaces.
+              </li>
+              <li className="my-2">
+                <b>Data Analytics:</b> Analyze data to uncover trends and make
+                informed business decisions.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
       {/* LEADING BRANDS CARDS AND PROJ START */}
       <div
         ref={ref7}
-        className={`flex flex-col justify-center items-center bg-indigo-950 max-h-fit w-full mt-10 transition-opacity ease-in duration-700 ${
+        className={`flex flex-col lg:flex-row justify-center items-center lg:items-start bg-indigo-950 max-h-fit w-full pt-10 transition-opacity ease-in duration-700 ${
           isVisible7 ? "opacity-100" : "opacity-0"
         }`}
       >
         {/* HEADING  */}
-        <div className="flex justify-center mt-10 w-8/12 lg:w-6/12 items-center text-center md:w-6/12 motion-preset-slide-up">
-          <h1
-            className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-white
+        <div className="flex flex-col justify-center mt-3 w-8/12 lg:w-6/12 items-center text-center md:w-6/12 motion-preset-slide-up">
+          <h3
+            className="text-4xl md:text-xl lg:text-2xl font-medium text-white lg:w-3/4
         "
           >
-            THE LEADING <span className="text-orange-400">BRANDS</span> WE{" "}
-            <span className="text-cyan-400">WORK</span> WITH
-          </h1>
+            Take your business to the next level with CSP's expertly crafted
+            tech and digital marketing services. Whether you're just starting
+            out or looking to scale, we have the perfect solution to meet your
+            needs. Contact us today to learn more!
+          </h3>
+
+          <Image
+            src="/assets/corperate.jpg"
+            alt="Group Working Together"
+            height={80}
+            width={600}
+            className="rounded-md justify-start mt-10"
+          />
         </div>
 
         {/* CARDS  */}
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5 lg:mt-10 w-full md:w-8/12 justify-items-center motion-preset-slide-up xl:gap-10">
-          <BrandsCards
-            name="Meta"
-            icon={
-              <Image
-                src="/assets/logos/Meta.png"
-                alt="Meta"
-                width={30}
-                height={30}
-              />
-            }
-          />
-
-          <BrandsCards
-            name="Google"
-            icon={
-              <Image
-                src="/assets/logos/google.png"
-                alt="Google"
-                width={30}
-                height={30}
-              />
-            }
-          />
-
-          <BrandsCards
-            name="Tesla"
-            icon={
-              <Image
-                src="/assets/logos/Tesla.png"
-                alt="Tesla"
-                width={30}
-                height={30}
-              />
-            }
-          />
-
-          <BrandsCards
-            name="Microsoft"
-            icon={
-              <Image
-                src="/assets/logos/Microsoft2.png"
-                alt="Microsoft"
-                width={30}
-                height={30}
-              />
-            }
-          />
-        </div>
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 mt-5 lg:mt-10 w-full md:w-8/12 justify-items-center motion-preset-slide-up xl:gap-0">
-          <BrandsCards
-            name="Intel"
-            icon={
-              <Image
-                src="/assets/logos/Intel.png"
-                alt="Intel"
-                width={30}
-                height={30}
-              />
-            }
-          />
-
-          <BrandsCards
-            name="OpenAi"
-            icon={
-              <Image
-                src="/assets/logos/chatgpt.png"
-                alt="Google"
-                width={30}
-                height={30}
-              />
-            }
-          />
-
-          <BrandsCards
-            name="X"
-            icon={
-              <Image
-                src="/assets/logos/Xlogo.png"
-                alt="X"
-                width={30}
-                height={30}
-              />
-            }
-          />
-
-          <BrandsCards
-            name="Instagram"
-            icon={
-              <Image
-                src="/assets/logos/insta.png"
-                alt="Instagram"
-                width={30}
-                height={30}
-              />
-            }
-          />
-        </div>
-
         {/* PROJECT START  */}
-        <div className="flex flex-col bg-sky-400 items-center justify-center rounded-3xl min-h-fit  w-[360px] sm:h-[250px] sm:w-[600px]  m-20 motion-preset-slide-up">
+        {/* <div className="flex flex-col bg-sky-400 items-center justify-center rounded-3xl min-h-fit  w-[360px] sm:h-[250px] sm:w-[600px]  m-20 motion-preset-slide-up">
           <div className="flex justify-center mt-14 md:mt-8 w-8/12 lg:w-6/12 items-center text-center md:w-6/12">
             <h1
               className="text-5xl font-extrabold text-white
@@ -412,6 +408,21 @@ const Home = () => {
 
           <button className="rounded-full my-8 md:mt-10 bg-white w-2/4 px-2 py-2 md:py-3 xl:py-4 transition-all duration-300 transform hover:scale-110">
             <p className="text-sky-400">Get a Proposal</p>
+          </button>
+        </div> */}
+
+        {/* Input boxes  */}
+
+        <div className="flex flex-col h-fit w-3/4 bg-white lg:w-1/3 xl:1/4 my-7 ml-5 rounded-md p-6">
+          <h1 className="text-black my-4 text-3xl font-bold w-1/2">
+            Fill Out The Form Below.
+          </h1>
+          <InputFields title="Name" helpertext="Your Name" />
+          <InputFields title="Company Name" helpertext="Your Company Name" />
+          <InputFields title="Phone Number" helpertext="(123)-xxx-xxxx" />
+          <InputFields title="Business Email" helpertext="you@mycompany.com" />
+          <button className="rounded-lg my-8 md:mt-10 bg-orange-500 w-full px-2 py-2 md:py-3 xl:py-4 transition-all duration-300 transform hover:scale-105">
+            <p className="text-white text-xl">Get a Proposal</p>
           </button>
         </div>
       </div>

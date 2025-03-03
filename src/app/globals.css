@@ -21,7 +21,7 @@ body,
   height: 100%;
   width: 100%;
   @apply text-sm;
-  @apply bg-white;
+  @apply bg-slate-50;
   @apply text-slate-500;
 }
 
@@ -37,4 +37,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .alt-font {
   font-family: var(--font-albert-sans);
+}
+
+@media (min-width: 768px) {
+   .md\:hover\:h-98:hover {
+      height: 25rem;
+   }
+}
+
+@media (min-width: 768px) {
+   .md\:hover\:h-99:hover {
+      height: 26rem;
+   }
+}
+
+@media (min-width: 768px) {
+   .md\:hover\:h-100:hover {
+      height: 29rem;
+   }
 }
