@@ -66,7 +66,7 @@ const Home = () => {
           }`}
         >
           <h1 className="text-6xl md:text-6xl lg:text-8xl font-extrabold">
-            CSP'S PREMIUM <span className="text-orange-400">TECH</span> AND{" "}
+            CSP&apos;S PREMIUM <span className="text-orange-400">TECH</span> AND{" "}
             <span className="text-cyan-400">DIGITAL MARKETING</span> SERVICES!
           </h1>
         </div>
@@ -250,8 +250,9 @@ const Home = () => {
                 relevant with regular updates and maintenance
               </li>
               <li className="my-2">
-                <b>SEO(Search Engine Optimization):</b> Improve your website's
-                visibility on search engines to attract more organic traffic.
+                <b>SEO(Search Engine Optimization):</b> Improve your
+                website&apos;s visibility on search engines to attract more
+                organic traffic.
               </li>
               <li className="my-2">
                 <b>Blog Marketing Execution:</b> Create and distribute valuable
@@ -332,7 +333,7 @@ const Home = () => {
                 with targeted strategies.
               </li>
               <li className="my-2">
-                <b>Conversion Optimization:</b> Improve your website's
+                <b>Conversion Optimization:</b> Improve your website&apos;s
                 performance to increase conversions.
               </li>
             </ul>
@@ -377,10 +378,10 @@ const Home = () => {
             className="text-4xl md:text-xl lg:text-2xl font-medium text-white lg:w-3/4
         "
           >
-            Take your business to the next level with CSP's expertly crafted
-            tech and digital marketing services. Whether you're just starting
-            out or looking to scale, we have the perfect solution to meet your
-            needs. Contact us today to learn more!
+            Take your business to the next level with CSP&apos;s expertly
+            crafted tech and digital marketing services. Whether you&apos;re
+            just starting out or looking to scale, we have the perfect solution
+            to meet your needs. Contact us today to learn more!
           </h3>
 
           <Image
